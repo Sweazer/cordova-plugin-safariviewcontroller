@@ -20,10 +20,6 @@
     <engine name="cordova" version=">=3.0.0"/>
   </engines>
 
-  <js-module name="SafariViewController" src="www/SafariViewController.js">
-    <clobbers target="SafariViewController"/>
-  </js-module>
-
   <platform name="ios">
     <config-file parent="/*" target="config.xml">
       <feature name="SafariViewController">
@@ -31,6 +27,10 @@
       </feature>
     </config-file>
 
+    <js-module name="SafariViewController" src="www/SafariViewController.js">
+        <clobbers target="SafariViewController"/>
+    </js-module>
+  
     <header-file src="src/ios/SafariViewController.h"/>
     <source-file src="src/ios/SafariViewController.m"/>
 
